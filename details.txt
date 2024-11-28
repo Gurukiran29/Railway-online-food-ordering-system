@@ -1,0 +1,33 @@
+<html>
+<body style="background-color:#bbffcc;">
+<head>
+<style>
+h1{
+font-size=30px;
+}
+</style>
+</head>
+</body>
+</html>
+<?php
+$name=$_GET["name"];
+$number=$_GET["number"];
+$trainname=$_GET["trainno"];
+$coach=$_GET["coach"];
+$seatnum=$_GET["seat"];
+$food_name=$_GET["fooditems"];
+$quantity=$_GET["quantity"];
+$waterbottle=$_GET["waterbottle"];
+$conn=new mysqli('localhost','root','','customer_details');
+if($conn->connect_error){
+die('connecton Failed:'.$conn->connect->connect_error);
+}
+else{
+$stmt = $conn->prepare("insert into registration(name,number,trainno,coach,seat,food_name,quantity,waterbottle)values(?,?,?,?,?,?,?,?)");
+$stmt->bind_param("sissisii",$name,$number,$trainname,$coach,$seatnum,$food_name,$quantity,$waterbottle);
+$stmt->execute();
+echo"<h1>registration successfully ORDER IS PLACED</h1>";
+$stmt->close();
+$conn->close();
+}
+?>

@@ -1,0 +1,12 @@
+<!doctype html>
+<body style=background-color:#dddddd;>
+<p title="deliver person login page"><strong>DBMS MINI PROJECT BY ABHISHEK AND GURUKIRAN.M</strong></p>
+<h1 style="color:white;font-size:30px;background-color:black;font-family:century;text-align:center;">RAILWAY ONLINE FOOD ORDERING </h1>
+<p style="text-align:center">TO DELIVER THE FOOD LOG IN</p>
+<form action="logindetails.php"method="GET"style="text-align:center;margin:0 0 50px 0;">
+Enter your E-MAIL:<input type="email" name="email"style="margin:0 0 50px 0;"><br>
+Password:<input type="password" name="password"style="margin:0 0 50px 0;"><br>
+<input type="Submit">
+<a href="newaccount.php"> create New Account</a>
+</body>
+</html>

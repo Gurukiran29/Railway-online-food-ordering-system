@@ -1,0 +1,64 @@
+<html>
+<body style="background-color:#ccedef;">
+<head>
+<style>
+h1{
+style=text-align:center;
+}
+.table{
+background-color:white;
+}
+.delete{
+background-color:green;
+color:white
+}
+</style>
+</head>
+</body>
+</html>
+<?php
+$trainname=$_GET["trainname"];
+$conn=mysqli_connect('localhost','root','','customer_details');
+$query="select *from registration where trainno='$trainname' ";
+$data=mysqli_query($conn,$query);
+$total=mysqli_num_rows($data);
+if($total!=0)
+{
+?>
+<h1>ALL ORDERS</h1>
+<table border="3" cellspacing="10" width="85%" class="table">
+<tr>
+<th width="5%">customer_id</th>
+<th width="10%">name</th>
+<th width="10%">number</th>
+<th width="20%">trainname</th>
+<th width="10'">coach_name</th>
+<th width="5%'">seat</th>
+<th width="10%">food</th>
+<th width="5%">quantity</th>
+<th width="5%">waterbottle</th>
+<th width="2%">delivered</th>
+</tr>
+<?php
+while($result=mysqli_fetch_assoc($data))
+{
+echo"<tr>
+     <td>".$result["customer_id"]."</td>
+     <td>".$result["name"]."</td>
+     <td>".$result["number"]."</td>
+     <td>".$result["trainno"]."</td>
+     <td>".$result["coach"]."</td>
+     <td>".$result["seat"]."</td>
+     <td>".$result["food_name"]."</td>
+     <td>".$result["quantity"]."</td>
+     <td>".$result["waterbottle"]."</td>
+     <td><a href='delete_if_delivered.php?name=$result[name]'><input type='submit' value='yes' class='delete'></a></td>
+     </tr>
+    ";
+}
+}
+else{
+echo"<h1>NO ORDERS FOUND</h1>";
+}
+?>
+</table>

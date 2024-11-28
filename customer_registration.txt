@@ -1,0 +1,80 @@
+<!doctype html>
+<body style=background-color:#bbccdd;>
+<p title="dbms project"><strong>DBMS MINI PROJECT BY ABHISHEK AND GURUKIRAN.M</strong></p>
+<h1 style="color:white;font-size:30px;background-color:black;font-family:century;text-align:center;">RAILWAY ONLINE FOOD ORDERING </h1>
+<p style="text-align:center"> TO ORDER YOUR FOOD PLEASE ENTER THE BELOW DETAILS</p>
+<form action="details.php"method="GET"style="text-align:center;margin:0 0 50px 0;">
+Enter your Name:<input type="text" name="name" required style="margin:0 0 50px 0;"><br>
+Enter your Phone Number:<input type="number" name="number" rquired style="margin:0 0 50px 0;"><br>
+
+Enter your train Name:<input list="trainno" name="trainno" required style="margin:0 0 50px 0;"><br>
+<datalist id="trainno">
+<option value="Tirupati Express">
+<option value="Karnataka Express">
+<option value="Panchaganga Express">
+<option value="Manglore Express">
+<option value="banglore Express">
+<option value="delhi Express">
+</datalist><br>
+
+Coach Name:<input list="coachno" name="coach" required style="margin:0 0 50px 0;"><br>
+<datalist id="coachno">
+<option value="SLR Sitting AND Luggage">
+<option value="UR General Compartment">
+<option value="H1-First Class AC">
+<option value="A1-AC2-Tier">
+<option value="B1-AC3-Tier">
+<option value="B2-AC3-Tier">
+<option value="S1-Sleeper">
+<option value="S2-Sleeper">
+<option value="S3-Sleeper">
+<option value="S4-Sleeper">
+<option value="S5-Sleeper">
+</datalist><br>
+
+
+your seat Number:<input type="text" name="seat" required style="margin:0 0 50px 0;"><br>
+<h1 style="color:white;font-size:30px;background-color:black;font-family:century;text-align:center;">PLEASE SELECT YOU FOOD</h1>
+<form action="foodorders.php"method="get"style="text-align:center;margin:0 0 50px 0;">
+SELECT YOUR FOOD:<input list="fooditems"name="fooditems" required style="text-align:center;margin:0 0 50px 0;"><br>
+<datalist id="fooditems">
+<option value="Lemon Rice">
+<option value="IDLI">
+<option value="VEG BIRYANI">
+<option value="BIRYANI">
+<option value="RICE BATH">
+<option value="EGG BIRYANI">
+<option value="CHAPATHI">
+<option value="DOSA">
+</datalist><br>
+QUANTITY:<input list="quantity" name="quantity" required min="0"max="10"style="text-align:center;margin:0 0 50px 0;"><br>
+<datalist id="quantity">
+<option value="0">
+<option value="1">
+<option value="2">
+<option value="3">
+<option value="4">
+<option value="5">
+<option value="6">
+<option value="7">
+</datalist><br>
+water bottle:<input list="waterbottles" name="waterbottle" required min="0"max="7"><br>
+<datalist id="waterbottles">
+<option value="0">
+<option value="1">
+<option value="2">
+<option value="3">
+<option value="4">
+<option value="5">
+<option value="6">
+<option value="7">
+</datalist><br>
+<input type="submit" style=background-color:#ddeeff>
+<address>
+code written by<br>
+Abhishek And Gurukiran<br>
+To contact us use <br>
+<a href="mailto:hpabhishek833@gmail.com"target="_self">Emal it</a><br>
+</address>
+</body>
+</html>

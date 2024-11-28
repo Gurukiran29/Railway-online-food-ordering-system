@@ -1,0 +1,17 @@
+<?php
+session_start();
+include("connection.php");
+error_reporting(0);
+
+$name=$_GET['name'];
+
+$data=mysqli_query($conn,"DELETE FROM registration WHERE name='$name' ");
+if($data)
+{
+echo"order deleted";
+}
+else
+{
+echo"order not deleted";
+}
+?>

@@ -1,0 +1,18 @@
+<?php
+$name=$_GET["name"];
+$number=$_GET["number"];
+$email=$_GET["email"];
+$password=$_GET["password"];
+$conn=new mysqli('localhost','root','','customer_details');
+if($conn->connect_error){
+die('connecton Failed:'.$conn->connect->connect_error);
+}
+else{
+$stmt = $conn->prepare("insert into seller_information(name,Number,Email,password)values(?,?,?,?)");
+$stmt->bind_param("siss",$name,$number,$email,$password);
+$stmt->execute();
+header('location:new_orders.php');
+$stmt->close();
+$conn->close();
+}
+?>

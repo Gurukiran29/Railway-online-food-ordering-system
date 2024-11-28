@@ -1,0 +1,16 @@
+<html>
+<body style="background-color:#bbbbcc;">
+<form action="data_fetch.php" method="GET"style="font-size:30px;font-family:century;text-align:center;">
+Enter your train Name:<input list="trainname" name="trainname"style="margin:0 0 50px 0;text-align:center;"><br>
+<datalist id="trainname">
+<option value="Tirupati Express">
+<option value="Karnataka Express">
+<option value="Panchaganga Express">
+<option value="Manglore Express">
+<option value="banglore Express">
+<option value="delhi Express">
+</datalist><br>
+<input type="submit" value="OK"style="background-color:#aabbcc;font-size:50px;font-family:century;text-align:center;">
+</form>
+</body>
+</html>
